@@ -72,6 +72,7 @@ if __name__ == '__main__':
     os.makedirs(os.path.join(opt.output_dir, 'features', feature_name), exist_ok=True)
 
     # load model
+    print(f"csn: {opt.model=}")
     dinov2_model = torch.hub.load('facebookresearch/dinov2', opt.model)
     dinov2_model.eval().cuda()
     transform = transforms.Compose([
