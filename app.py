@@ -401,4 +401,5 @@ if __name__ == "__main__":
     #  pipeline = TrellisImageTo3DPipeline.from_pretrained("JeffreyXiang/TRELLIS-image-large")
     pipeline = TrellisImageTo3DPipeline.from_pretrained("/home/csn/code/TRELLIS-image-large")
     pipeline.cuda()
-    demo.launch(share=True)
+    #  demo.launch(share=True) #NOTE: 这个是跨网段的luanch方式
+    demo.launch(server_name='0.0.0.0') #NOTE：这个是同一个局域网的luanch方式。0.0.0.0表示监听该网络所有网址
