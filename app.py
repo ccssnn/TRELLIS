@@ -401,4 +401,4 @@ if __name__ == "__main__":
     #  pipeline = TrellisImageTo3DPipeline.from_pretrained("JeffreyXiang/TRELLIS-image-large")
     pipeline = TrellisImageTo3DPipeline.from_pretrained("/home/csn/code/TRELLIS-image-large")
     pipeline.cuda()
-    demo.launch()
+    demo.launch(share=True)
